@@ -1,14 +1,7 @@
-package money;
+## Mike's MakeChange Homework Project
 
-import java.util.Scanner;
+This is my week 1 graded homework.
 
-public class ChangeBurglar {
-
-	public static void main(String[] args) {
-
-	}
-
-}
 // Need a method to define how much change in amount tendered
 // Need a method to return a correct amount message when the customer provides
 // the exact amount
