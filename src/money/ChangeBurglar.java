@@ -5,6 +5,36 @@ import java.util.Scanner;
 public class ChangeBurglar {
 
 	public static void main(String[] args) {
+		
+		double priceAmount;
+		double tenderedAmount;
+		double tooLittleMoney;
+		double tooMuchMoney;
+		double remainingChange;
+		
+		int billsTwenty;
+		int billsOne;
+		int changeQuarter;
+		int changeDime;
+		int changeNickel;
+		int changePenny;
+		
+		
+		
+		
+		System.out.println("Please enter the price of the merchandise.");
+		Scanner kb = new Scanner(System.in);
+		if (kb != null)
+		{
+		priceAmount = kb.nextDouble();
+		System.out.println("The price of the merchandise is: $" + priceAmount);
+		System.out.println("============================================");
+		System.out.println("Please enter the amount of money tendered by the customer");
+		tenderedAmount = kb.nextDouble();
+		while (tenderedAmount !=  priceAmount){
+		}
+		kb.close();
+		}
 
 	}
 
