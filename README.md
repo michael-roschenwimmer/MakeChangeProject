@@ -1,4 +1,4 @@
-## Mike's MakeChange Homework Project
+## Mike's MakeChange(ChangeBurglar) Homework Project
 
 This is my week 1 graded homework.
 
