@@ -31,7 +31,6 @@ output is dispensed. This prevents the user(cashier) from giving the customer ch
 
 
 
-()**I tried to include an option to type QUIT or quit to stop the loop and tried to
+(**I tried to include an option to type QUIT or quit to stop the loop and tried to
 use methods but I need to review and learn how to do it more effectively. Lastly, I planned
-on putting an option for the cashier to become a thief but didn't get around to it.
- For now this was the best I could do.**)
+on putting an option for the cashier to become a thief but didn't get around to it.**)
