@@ -21,11 +21,12 @@ public class ChangeBurglar {
 			System.out.println("The price of the merchandise is: $" + priceAmount / 100);
 			System.out.println("============================================");
 			System.out.println("Please enter the amount of money tendered by the customer:");
-			tenderedAmount = (kb.nextDouble() * 100); // cashier receives X amount
-													// from customer ---
-													// multiplied
-													// by 100 for easier
-													// calculations
+			tenderedAmount = (kb.nextDouble() * 100); // cashier receives X
+														// amount
+														// from customer ---
+														// multiplied
+														// by 100 for easier
+														// calculations
 
 			if (tenderedAmount < priceAmount) { // if amount given from
 				// customer to cashier
@@ -120,17 +121,15 @@ public class ChangeBurglar {
 
 					}
 					changePenny = remainingChange / 1;
-					
+
 					if (changePenny > 0) {
-					System.out.println(changePenny + ": Pennies");
+						System.out.println(changePenny + ": Pennies");
 					}
 
 				}
 			}
 		}
-		kb.close(); // scanner closed --- no more input
+		kb.close();
 	}
-}
 
-// FOR FUN ONLY OPTION Need a method to return a change teller message (pocket
-// the change, i.e. ChangeBurglar) when customer provides too much money
+}
