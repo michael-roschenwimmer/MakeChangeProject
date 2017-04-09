@@ -7,22 +7,38 @@ public class ChangeBurglar {
 	public static void main(String[] args) {
 		Scanner kb = new Scanner(System.in);
 
-		double priceAmount, tenderedAmount, amountReturned;    // declarations
-		int remainingChange;   								   // declarations
+		double priceAmount, tenderedAmount, amountReturned; // declarations
+		int remainingChange; // declarations
 
 		System.out.println("Please enter the price of the merchandise:");
-		priceAmount = kb.nextDouble();      				   				// cashier enters price of merchandise
-		System.out.println("The price of the merchandise is: $" + priceAmount);
+		priceAmount = kb.nextDouble() * 100; // cashier enters price of
+												// merchandise --- multiplied by
+												// 100 for easier calculations
+		System.out.println("The price of the merchandise is: $" + priceAmount / 100);
 		System.out.println("============================================");
 		System.out.println("Please enter the amount of money tendered by the customer:");
-		tenderedAmount = kb.nextDouble();                                   // cashier receives X amount from customer
-		kb.close();              									// scanner closed --- no more input
-		amountReturned = tenderedAmount - priceAmount;				// change given back to customer = amount customer gave - price of merchandise
-		remainingChange = (int) amountReturned;		// remaining change for machine to process = amountReturned cased into an (int) in order to multiply by 100 for easier calculations
+		tenderedAmount = kb.nextDouble() * 100; // cashier receives X amount
+												// from customer --- multiplied
+												// by 100 for easier
+												// calculations
+		kb.close(); // scanner closed --- no more input
+		amountReturned = (tenderedAmount - priceAmount); // change given back to
+															// customer = amount
+															// customer gave -
+															// price of
+															// merchandise
+		remainingChange = (int) amountReturned; // remaining change for machine
+												// to process = amountReturned
+												// cased into an (int) in order
+												// to multiply by 100 for easier
+												// calculations
 
-		if (tenderedAmount > priceAmount) {          // if amount given by customer to cashier is more than the price of the merchandise then...
-			remainingChange = (int) amountReturned * 100;  
+		if (tenderedAmount > priceAmount) { // if amount given by customer to
+											// cashier is more than the price of
+											// the merchandise then...
+			remainingChange = (int) amountReturned;
 			int billsTwenty, billsTen, billsFive, billsOne, changeQuarter, changeDime, changeNickel, changePenny;
+			amountReturned = (tenderedAmount - priceAmount) / 100;
 
 			billsTwenty = remainingChange / 2000;
 
@@ -30,7 +46,7 @@ public class ChangeBurglar {
 				remainingChange = remainingChange % 2000;
 			}
 			billsTen = remainingChange / 1000;
-			
+
 			if (billsTen > 0) {
 				remainingChange = remainingChange % 1000;
 			}
@@ -70,9 +86,13 @@ public class ChangeBurglar {
 					+ " :Five Dollar Bills \n" + billsOne + " :One Dollar Bills \n" + changeQuarter + " :Quarters \n"
 					+ changeDime + " :Dimes \n" + changeNickel + " :Nickels \n" + changePenny + " :Pennies");
 
-			if (tenderedAmount == priceAmount) { // if amount given from customer to cashier is exact then...
+			if (tenderedAmount == priceAmount) { // if amount given from
+													// customer to cashier is
+													// exact then...
 				System.out.print("Exact amount, no change needed.");
-			} else if (tenderedAmount < priceAmount) { // if amount given from customer to cashier is too little then...
+			} else if (tenderedAmount < priceAmount) { // if amount given from
+														// customer to cashier
+														// is too little then...
 				System.out.print("Please request more money from the customer");
 			}
 
