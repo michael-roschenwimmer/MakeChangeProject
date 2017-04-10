@@ -31,7 +31,7 @@ public class ChangeBurglar {
 			if (tenderedAmount < priceAmount) { // if amount given from
 				// customer to cashier
 				// is too little then...
-				System.out.println("Please request more money from the customer. I'm restarting now...");
+				System.out.println("***ERROR!*** Please request more money from the customer. I'm restarting now...");
 
 			}
 			{
